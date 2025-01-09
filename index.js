@@ -16,6 +16,11 @@ async function startBot() {
     // Evento para exibir o QR Code no terminal
     sock.ev.on('connection.update', (update) => {
 
+        const { qr } = update;
+  if (qr) {
+    qrcode.generate(qr, { small: true }); // Exibe no terminal
+  }
+        
         const { connection, lastDisconnect } = update;
 
         if (connection === 'close') {
