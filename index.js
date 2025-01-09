@@ -4,6 +4,20 @@ const qrcode = require('qrcode-terminal');
 const fs = require('fs');
 const path = require('path');
 
+const express = require('express');
+const app = express();
+
+// Resposta simples para testar
+app.get('/', (req, res) => {
+    res.status(200).send('Bot is online!');
+});
+
+// A variável de ambiente PORT é definida pela Render
+const port = process.env.PORT || 3000;  // Se não tiver a variável, usa 3000 por padrão
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
+});
+
 
 async function startBot() {
     // Configuração para salvar as credenciais de autenticação
