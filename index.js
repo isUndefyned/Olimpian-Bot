@@ -18,7 +18,8 @@ async function startBot() {
 
         const { qr } = update;
   if (qr) {
-    qrcode.generate(qr, { small: true }); // Exibe no terminal
+    console.log("Copie o QR code abaixo e use um gerador de QR online:");
+        console.log(qr); // Exibe o texto do QR no terminal
   }
         
         const { connection, lastDisconnect } = update;
