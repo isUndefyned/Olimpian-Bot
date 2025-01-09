@@ -238,9 +238,9 @@ Junte-se a nós e escreva sua própria lenda!
                 const maxNumber = parseInt(text.replace("!dado ", ""), 10);
 
                 if (!isNaN(maxNumber) && maxNumber >= 2) {
-                    const resultado = Math.floor(Math.random() * (maxNumber + 1));
+                    const result = Math.floor(Math.random() * (maxNumber + 1));
 
-                    await sock.sendMessage(sender, { text: `🎲 O dado rolou e caiu em: ${resultados} (1 a ${maxNumber})` });
+                    await sock.sendMessage(sender, { text: `🎲 O dado rolou e caiu em: ${result} (1 a ${maxNumber})` });
 
                 } else {
                     await sock.sendMessage(sender, { text: "Por favor, forneça um número válido maior ou igual a 2. Exemplo: !dado 100" });
