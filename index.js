@@ -44,7 +44,7 @@ async function startBot() {
 
     // Evento para escutar mensagens recebidas
     sock.ev.on('messages.upsert', async (message) => {
-        console.log(JSON.stringify(message, null, 2));
+        //console.log(JSON.stringify(message, null, 2));
         const msg = message.messages[0];
         if (!msg) return; // ignora mensagens vazias
         //if (msg.key.fromMe) return; // ignora mensagens enviadas pelo proprio bot
