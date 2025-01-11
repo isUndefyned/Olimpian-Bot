@@ -8,6 +8,8 @@ const { setTimeout } = require('timers/promises');
 const { profile } = require('console');
 const { json } = require('stream/consumers');
 
+const express = require("express");
+const app = express();
 
 async function startBot() {
     // Configuração para salvar as credenciais de autenticação
