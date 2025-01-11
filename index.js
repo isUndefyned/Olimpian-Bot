@@ -11,6 +11,16 @@ const { json } = require('stream/consumers');
 const express = require("express");
 const app = express();
 
+const PORT = process.env.PORT || 3000;
+
+app.get("/", (req, res) => {
+    res.send("Hello, Render!");
+});
+
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+});
+
 async function startBot() {
     // Configuração para salvar as credenciais de autenticação
     const { state, saveCreds } = await useMultiFileAuthState('auth_info');
